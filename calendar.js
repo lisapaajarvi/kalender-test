@@ -42,10 +42,3 @@ function createDayDivs(days) {
     }
     return dayDivs;
 }
-
-
-
-/*        const emptyDiv = document.createElement("div")
-        emptyDiv.innerHTML = "";
-        dayDivs.push(emptyDiv);
-*/
