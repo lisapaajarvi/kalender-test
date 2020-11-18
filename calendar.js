@@ -4,7 +4,7 @@ function main() {
     fetchDays();
 }
 
-function fetchDays(event) {
+function fetchDays() {
     $.ajax({
         url: "http://sholiday.faboul.se/dagar/v2.1/2020/11",
         type: "GET",
@@ -25,27 +25,28 @@ function addCalendar(daysInAMonth) {
     container.append(...dayDivs);
 }
 
-function createDayDivs(days) {
-    const dayDivs = [];   
-
+function createDayDivs(days) { 
+    const dayDivs = [];  
+    
     if(days[0].veckodag === "Söndag") {
-        const emptyDiv = document.createElement("div")
-        emptyDiv.innerHTML = "";
-        dayDivs.push(emptyDiv);
+        for( let i=0; i<6; i++ ) {
+            const emptyDiv = document.createElement("div")
+            emptyDiv.innerHTML = "";
+            dayDivs.push(emptyDiv);
+        }
     }
 
     for (const day of days) {
         const dayDiv = document.createElement("div")
         dayDiv.innerHTML = day.datum + " " + day.veckodag;
         dayDivs.push(dayDiv); 
-        console.log(dayDivs)
     }
-
     return dayDivs;
 }
 
-function createEmptyDiv() {
-    const emptyDiv = document.createElement("div")
-    emptyDiv.innerHTML = "";
-    dayDivs.push(emptyDiv);
-} 
+
+
+/*        const emptyDiv = document.createElement("div")
+        emptyDiv.innerHTML = "";
+        dayDivs.push(emptyDiv);
+*/
