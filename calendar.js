@@ -12,7 +12,6 @@ function fetchDays() {
         success: function(response) {
             console.log(response.dagar)
             addCalendar(response.dagar);
-
         }
     });
 }
