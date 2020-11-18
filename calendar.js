@@ -17,7 +17,7 @@ function fetchDays() {
 }
 
 function addCalendar(daysInAMonth) {
-    const container = document.getElementById("days-div");
+    const container = document.getElementById("calendar-div");
     container.innerHTML = "";
 
     const dayDivs = createDayDivs(daysInAMonth);
@@ -37,7 +37,7 @@ function createDayDivs(days) {
 
     for (const day of days) {
         const dayDiv = document.createElement("div")
-        dayDiv.innerHTML = day.datum + " " + day.veckodag;
+        dayDiv.innerHTML = day.datum;
         dayDivs.push(dayDiv); 
     }
     return dayDivs;

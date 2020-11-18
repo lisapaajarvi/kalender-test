@@ -6,17 +6,27 @@
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-rows: 6rem 6rem 6rem 6rem 6rem 6rem;
+    /*grid-template-areas: 
     "monday1 tuesday1 wednesday1 thursday1 friday1 saturday1 sunday1"
     "monday2 tuesday2 wednesday2 thursday2 friday2 saturday2 sunday2"
     "monday3 tuesday3 wednesday3 thursday3 friday3 saturday3 sunday3"
     "monday4 tuesday4 wednesday4 thursday4 friday4 saturday4 sunday4"
     "monday5 tuesday5 wednesday5 thursday5 friday5 saturday5 sunday5"
-    "monday6 tuesday6 wednesday6 thursday6 friday6 saturday6 sunday6";
+    "monday6 tuesday6 wednesday6 thursday6 friday6 saturday6 sunday6";*/
 }
 
 div {
     padding: 1rem;
-    margin-top: 2rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-header {
+    justify-content: space-around;
+    display: flex;
+
 }
